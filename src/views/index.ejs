@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <%- include('templates/header')%>
+</head>
+<body>
+    <%- include('templates/nav-menu') %>
+
+    <!-- Main Content -->
+    <main class="container vh-100 text-center lh-lg">
+        <p class="h1 p-5">Conversión de Bases</p>
+
+        <!-- Binario a Decimal -->
+        <div class="col">
+            <p class="fw-medium fs-4">Convertir binario a decimal</p>
+        </div>
+        <div class="row align-items-start">
+            <!-- Binario -->
+            <div class="col">
+                <div class="input-group mb-3 p-1 bg-info bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN</span>
+                    <input type="text" class="form-control" id="binario" placeholder="Escribe un número..." >
+                </div>
+            </div>
+            <!-- Decimal -->
+            <div class="col">
+                <div class="input-group mb-3 p-1 bg-danger bg-opacity-50 rounded">
+                    <span class="input-group-text">DEC</span>
+                    <input type="text" class="form-control" disabled readonly id="entero" placeholder="Resultado">
+                </div>
+            </div>
+        </div>
+
+        <!-- Decimal a Binaio -->
+        <div class="col">
+            <p class="fw-medium fs-4">Convertir decimal a binario</p>
+        </div>
+        <div class="row align-items-start">
+            <!-- Decimal -->
+            <div class="col">
+                <div class="input-group mb-3 p-1 bg-info bg-opacity-50 rounded">
+                    <span class="input-group-text">DEC</span>
+                    <input type="text" class="form-control" id="decimal" placeholder="Escribe un número...">
+                </div>
+            </div>
+            <div class="col">
+                <div class="input-group mb-3 p-1 bg-danger bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN</span>
+                    <input type="text" class="form-control" disabled readonly id="entero_conv"
+                        placeholder="Resultado">
+                </div>
+            </div>
+        </div>
+
+        <!-- Suma de Binarios -->
+        <div class="col">
+            <p class="fw-medium fs-4">Suma de binarios</p>
+        </div>
+        <div class="row align-items-start">
+            <div class="col-lg-4">
+                <div class="input-group mb-3 p-1 bg-info bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN 1</span>
+                    <input type="text" class="form-control sumbin1" placeholder="Escribe un número...">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group mb-3 p-1 bg-info bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN 2</span>
+                    <input type="text" class="form-control sumbin2" placeholder="Escribe un número...">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="input-group mb-3 p-1 bg-danger bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN</span>
+                    <input type="text" class="form-control ressuma" disabled readonly placeholder="Resultado">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="input-group mb-3 p-1 bg-danger bg-opacity-50 rounded">
+                    <span class="input-group-text">DEC</span>
+                    <input type="text" class="form-control ressumadec" disabled readonly
+                        placeholder="Resultado">
+                </div>
+            </div>
+        </div>
+
+        <!-- Resa de Binarios -->
+        <div class="col">
+            <p class="fw-medium fs-4">Resta de binarios</p>
+        </div>
+        <div class="row align-items-start">
+            <div class="col-lg-4">
+                <div class="input-group mb-3 p-1 bg-info bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN 1</span>
+                    <input type="text" class="form-control restabin" placeholder="Escribe un número...">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group mb-3 p-1 bg-info bg-opacity-50 rounded">
+                    <span class="input-group-text">BIN 2</span>
+                    <input type="text" class="form-control restabin2" placeholder="Escribe un número...">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="input-group mb-3 p-1 bg-danger bg-opacity-50 border border-danger rounded">
+                    <span class="input-group-text">BIN</span>
+                    <input type="text" class="form-control restatotal" disabled readonly
+                        placeholder="Resultado">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="input-group mb-3 p-1 bg-danger bg-opacity-50 border border-danger rounded">
+                    <span class="input-group-text">DEC</span>
+                    <input type="text" class="form-control restadec" disabled readonly placeholder="Resultado">
+                </div>
+            </div>
+        </div>
+
+        
+
+        </main>
+
+    <%- include('templates/footer') %>
+</body>
+</html>
